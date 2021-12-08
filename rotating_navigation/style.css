@@ -8,7 +8,12 @@ body{
     background-color: rgb(54, 52, 48);
     color: white;
     display: flex;
-    overflow: hidden;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+.hidden{
+    display: none;
 }
 
 .nav_button{
@@ -43,13 +48,22 @@ body{
 
 
 .article{
-    transform: rotate(-25deg);
-    transform-origin: top left;
     width: 100%;
     background-color: white;
     color: black;
     position: absolute;
     padding-bottom: 100px;
+    transition: transform 0.5s ease-out;
+}
+
+.rotate-for{
+    transform-origin: top left;
+    transform: rotate(-20deg);
+}
+
+.rotate-back{
+    transform-origin: top left;
+    transform: rotate(+0deg);
 }
 
 .content{
